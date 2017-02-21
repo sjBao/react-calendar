@@ -5,12 +5,13 @@
 .container {
   font-family: 'Oxygen', sans-serif;
   color: #555;
+  min-width: 300px
 }
 
 .appointments-form {
   display: inline-block;
   padding: 0 20px;
-  vertical-align: top;
+  position: fixed;
 }
 
 .appointments-form input[name='title'] {
@@ -34,19 +35,38 @@
   transform: translate(2px, 2px);
 }
 
-.appointments-form input[type='submit']:focus {
+.appointments-form input:focus {
   outline: 3px solid #C9DF78 ;
 }
 
 
 .appointments-list {
   border-left: 2px solid grey;
-  display: inline-block;
+  display: block;
+  margin-left: 300px;
+  max-width: 500px;
   padding-left: 20px;
-  vertical-align: top;
+  position: relative;
 }
 
 .appointment {
   border-bottom: 1px solid grey;
   margin-bottom: 60px;
+}
+
+@media screen and (max-width: 600px){
+
+  .appointments-form  {
+    display: block;
+    padding: 10px 5px;
+    position: static;
+    min-width: 300px
+  }
+
+  .appointments-list {
+    border: none;
+    margin: 10px 0;
+    padding: 10px 5px;
+    min-width: 300px;
+  }
 }

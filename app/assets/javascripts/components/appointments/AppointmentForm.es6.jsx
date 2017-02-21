@@ -36,7 +36,7 @@ class AppointmentForm extends React.Component {
           <input
             name="title"
             value={inputTitle}
-            placeholder="Appointment"
+            placeholder="Appointment Info"
             onChange={this.handleChange}
           />
 
