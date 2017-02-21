@@ -1,3 +1,52 @@
 // Place all the styles related to the Appointments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  font-family: 'Oxygen', sans-serif;
+  color: #555;
+}
+
+.appointments-form {
+  display: inline-block;
+  padding: 0 20px;
+  vertical-align: top;
+}
+
+.appointments-form input[name='title'] {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.appointments-form input[type='submit'] {
+  background-color: #8DB576;
+  border: none;
+  box-shadow: 3px 3px 3px #C9DF78;
+  color: #FFF;
+  font-size: 1.5em;
+  margin: 15px 0;
+  transition: 0.1s
+}
+
+.appointments-form input[type='submit']:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #C9DF78;
+  transform: translate(2px, 2px);
+}
+
+.appointments-form input[type='submit']:focus {
+  outline: 3px solid #C9DF78 ;
+}
+
+
+.appointments-list {
+  border-left: 2px solid grey;
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
+}
+
+.appointment {
+  border-bottom: 1px solid grey;
+  margin-bottom: 60px;
+}
