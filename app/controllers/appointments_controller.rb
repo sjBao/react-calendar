@@ -14,6 +14,18 @@ class AppointmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @appointment = Appointment.find_by(id: params[:id])
+
+    if @appointment.destroy
+      @appointments = Appointment.order('apt_time ASC')
+      render json: @appointments
+    else
+      render status: 404
+    end
+
+  end
+
   private
   def appointment_params
     params.require(:appointment).permit(:title, :apt_time)
