@@ -18,8 +18,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.find_by(id: params[:id])
 
     if @appointment.destroy
-      @appointments = Appointment.order('apt_time ASC')
-      render json: @appointments
+      render json: @appointment
     else
       render status: 404
     end

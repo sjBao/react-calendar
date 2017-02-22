@@ -1,12 +1,11 @@
 class Appointment extends React.Component {
   handleClick(event){
     event.preventDefault()
-    console.log('hello!')
     $.ajax({
       url: '/appointments/' + this.props.appointment.id,
       type: 'DELETE'
     }).done(response=>{
-      console.log(response)
+      this.props.removeAppointment(response)
     })
   }
 

@@ -8,6 +8,7 @@ class Appointments extends React.Component {
     }
     this.handleUserInput = this.handleUserInput.bind(this)
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
+    this.removeAppointment = this.removeAppointment.bind(this)
   }
 
   handleUserInput(obj){
@@ -29,12 +30,21 @@ class Appointments extends React.Component {
   }
 
   addNewAppointment(appointment){
-    var appointments = React.addons.update( this.state.appointments, { $push: [appointment] })
+    var appointments = React.addons.update(this.state.appointments, { $push: [appointment] })
     this.setState({
       appointments: appointments.sort((a,b)=>{
         return new Date(a.apt_time) - new Date(b.apt_time)
       })
     })
+  }
+
+  removeAppointment(appointment) {
+    aptIndex = this.state.appointments.map(a=>{
+      return a.id
+    }).indexOf(appointment.id)
+
+    var appointments = React.addons.update(this.state.appointments, { $splice: [[aptIndex, 1]] })
+    this.setState({ appointments: appointments })
   }
 
   render(){
@@ -51,7 +61,10 @@ class Appointments extends React.Component {
           inputAptTime={this.state.inputAptTime}
         />
 
-        <AppointmentsList appointments={this.state.appointments} />
+        <AppointmentsList
+          appointments={this.state.appointments}
+          removeAppointment={this.removeAppointment}
+        />
       </section>
     )
   }
