@@ -15,10 +15,9 @@ class Appointment extends React.Component {
       <div className='appointment'>
         <h3>{title}</h3>
         <p>{moment(apt_time).format('MMMM DD YYYY, h:mm a')}</p>
-        <input type="submit"
-          value="Remove Appointment"
+        <button
           onClick={this.handleClick.bind(this)}
-        />
+        >Remove Appointment</button>
       </div>
     )
   }

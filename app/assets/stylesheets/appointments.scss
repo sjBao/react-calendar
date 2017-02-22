@@ -9,7 +9,9 @@
 }
 
 .appointments-form {
+  border-right: 2px solid grey;
   display: inline-block;
+  height: 85%;
   padding: 0 20px;
   position: fixed;
 }
@@ -41,7 +43,6 @@
 
 
 .appointments-list {
-  border-left: 2px solid grey;
   display: block;
   margin-left: 300px;
   max-width: 500px;
