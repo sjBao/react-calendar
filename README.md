@@ -1,24 +1,10 @@
-# README
+# React Calendar
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple appointment tracker built using Rails for backend and React.js for the view.
 
-Things you may want to cover:
+## Dependencies: 
+* Make sure you have postgresql installed on your machine.
+* run `bundle`
+* run `rails db:setup`
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
