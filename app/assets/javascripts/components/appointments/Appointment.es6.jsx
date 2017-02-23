@@ -16,8 +16,11 @@ class Appointment extends React.Component {
         <h3>{title}</h3>
         <p>{moment(apt_time).format('MMMM DD YYYY, h:mm a')}</p>
         <button
+
           onClick={this.handleClick.bind(this)}
-        >Remove Appointment</button>
+          className="apt-rm-btn fa fa-trash-o fa-lg" 
+          aria-hidden="true"
+        />
       </div>
     )
   }

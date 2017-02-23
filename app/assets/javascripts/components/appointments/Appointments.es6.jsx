@@ -50,7 +50,7 @@ class Appointments extends React.Component {
   render(){
     return (
       <section className="container">
-        <header>
+        <header id="main-header">
           <h1>React Calendar</h1>
         </header>
 
